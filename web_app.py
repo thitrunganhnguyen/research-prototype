@@ -218,9 +218,11 @@ if st.session_state.result:
             st.markdown(st.session_state.result)
 
             st.download_button(
-                "Download Report",
+                "⬇ Download Report",
                 st.session_state.result,
-                "research_report.md"
+                "research_report.md",
+                mime="text/markdown",
+                type="primary"
             )
 
         with right:
@@ -240,7 +242,9 @@ if st.session_state.result:
         st.markdown(st.session_state.result)
 
         st.download_button(
-            "Download Agent Report",
+            "⬇ Download Agent Report",
             st.session_state.result,
-            "agent_research_report.md"
+            "agent_research_report.md",
+            mime="text/markdown",
+            type="primary"
         )
